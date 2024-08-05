@@ -9,7 +9,9 @@
 <body>
     <h1>Dados do servidor</h1>
     <?php
-    phpinfo();
+        $nome = "matheus";
+        echo "<p> eu me chamo $nome!</p>";
+        
     ?>
 	
 </div>
