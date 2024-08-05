@@ -8,6 +8,7 @@ const miniTwitter = {
     posts: 
         [
             {   
+                id:1,
                 owner: 'mthrfl',
                 content:'priemiro tweet',
             }
@@ -15,8 +16,30 @@ const miniTwitter = {
 
 };
 //Create
-function criapost(){
+function criapost(dados){
+    miniTwitter.posts.push({
+        id : miniTwitter.posts.length + 1,
+        owner: dados.owner,
+        content: dados.content
+        
+    });
+}
+criapost({owner: 'mthrfl', content: "segundo tweet"})
+//console.log(miniTwitter.posts)
 
+//Ler
+function pegaPost(){
+    return miniTwitter.posts
+}
+console.log(pegaPost())
+
+//update
+function atualizaContentdoPost(id,novoConteudo)
+{
+    pegaPost.find((post) => {
+        return post.id === id;
+    })
+    console.log()
 }
 
-console.log(miniTwitter.posts)
+atualizaContentdoPost(1,'novo conteudo do post')
