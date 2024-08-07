@@ -11,6 +11,7 @@
         date_default_timezone_set("America/Sao_paulo");
         echo "Hoje é dia " . date("d/M/Y");
         echo " a hora atual e: " . date("G:i:s ");
+        
     ?>
 </body>
 </html>
